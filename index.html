@@ -2780,7 +2780,7 @@ function saveWorkerUrl(){
     return;
   }
   input.classList.remove('error');
-  testWorkerWithRetry(url, 1, 4);
+  testWorkerWithRetry(url, 1, 2);
 }
 
 async function testWorkerWithRetry(url, attempt, maxAttempts){
@@ -2807,7 +2807,7 @@ async function testWorkerWithRetry(url, attempt, maxAttempts){
   } catch(err) {
     if(attempt < maxAttempts){
       resultEl.innerHTML=`<span style="color:var(--muted)">⏳ Esperando respuesta... (intento ${attempt}/${maxAttempts})</span>`;
-      setTimeout(()=>testWorkerWithRetry(url, attempt+1, maxAttempts), 2000);
+      setTimeout(()=>testWorkerWithRetry(url, attempt+1, maxAttempts), 5000);
     } else {
       resultEl.innerHTML=`<span style="color:var(--warn)">❌ No se pudo conectar. Verifica la URL e intenta de nuevo.</span>`;
     }
