@@ -648,24 +648,43 @@ textarea{min-height:85px}
   <div class="validation-panel" id="vp0"></div>
 </div>
 
-<!-- 1 ABSTRACT -->
+<!-- 1 PROBLEMA -->
 <div class="section" id="sec1">
   <div class="card">
-    <div class="card-header"><h2>📄 Abstract / Resumen Ejecutivo</h2><button class="btn-mentor" onclick="openMentor('abstract')">🧑‍💼 Mentor</button></div>
-    <p class="hint">Describe tu proyecto. Mínimo 50 palabras.</p>
+    <div class="card-header"><h2>🔍 Planteamiento del Problema</h2><button class="btn-mentor" onclick="openMentor('problema')">🧑‍💼 Mentor</button></div>
+    <p class="hint">Describe el problema que tu empresa va a resolver. Sé específico y usa datos si los tienes.</p>
     <div class="fields-alert" id="alert1"></div>
-    <textarea id="abstract" placeholder="Nuestro proyecto consiste en..." oninput="save();countWords(this,'wc_abstract')" rows="7"></textarea>
-    <div class="word-count" id="wc_abstract">0 palabras</div>
+    <label>¿Cuál es el problema que identificaste?</label>
+    <textarea id="prob_descripcion" placeholder="En nuestra comunidad existe el problema de..." oninput="save();countWords(this,'wc_prob')" rows="4"></textarea>
+    <div class="word-count" id="wc_prob">0 palabras</div>
+    <label>¿A quién afecta este problema?</label>
+    <input type="text" id="prob_afectados" placeholder="Ej: Estudiantes de bachillerato entre 14 y 17 años" oninput="save()"/>
+    <label>¿Qué tan grave es? (evidencia o datos)</label>
+    <textarea id="prob_evidencia" placeholder="Según datos del DANE... / El 70% de los jóvenes..." oninput="save()" rows="3"></textarea>
+    <label>¿Qué soluciones existen actualmente y por qué no son suficientes?</label>
+    <textarea id="prob_soluciones_actuales" placeholder="Actualmente existen... pero tienen la limitación de..." oninput="save()" rows="3"></textarea>
   </div>
   <div class="validation-panel" id="vp1"></div>
 </div>
 
-<!-- 2 MISIÓN & VISIÓN -->
+<!-- 2 ABSTRACT -->
 <div class="section" id="sec2">
+  <div class="card">
+    <div class="card-header"><h2>📄 Abstract / Resumen Ejecutivo</h2><button class="btn-mentor" onclick="openMentor('abstract')">🧑‍💼 Mentor</button></div>
+    <p class="hint">Describe tu proyecto. Mínimo 50 palabras.</p>
+    <div class="fields-alert" id="alert2"></div>
+    <textarea id="abstract" placeholder="Nuestro proyecto consiste en..." oninput="save();countWords(this,'wc_abstract')" rows="7"></textarea>
+    <div class="word-count" id="wc_abstract">0 palabras</div>
+  </div>
+  <div class="validation-panel" id="vp2"></div>
+</div>
+
+<!-- 3 MISIÓN & VISIÓN -->
+<div class="section" id="sec3">
   <div class="card">
     <div class="card-header"><h2>🎯 Misión</h2><button class="btn-mentor" onclick="openMentor('mision')">🧑‍💼 Mentor</button></div>
     <p class="hint">Mínimo 30 palabras.</p>
-    <div class="fields-alert" id="alert2"></div>
+    <div class="fields-alert" id="alert3"></div>
     <textarea id="mision" placeholder="Somos una empresa dedicada a..." oninput="save()" rows="4"></textarea>
   </div>
   <div class="card">
@@ -673,43 +692,43 @@ textarea{min-height:85px}
     <p class="hint">Mínimo 20 palabras.</p>
     <textarea id="vision" placeholder="En el año 2030, seremos..." oninput="save()" rows="4"></textarea>
   </div>
-  <div class="validation-panel" id="vp2"></div>
+  <div class="validation-panel" id="vp3"></div>
 </div>
 
-<!-- 3 VALORES -->
-<div class="section" id="sec3">
+<!-- 4 VALORES -->
+<div class="section" id="sec4">
   <div class="card">
     <div class="card-header"><h2>💎 Valores Corporativos</h2><button class="btn-mentor" onclick="openMentor('valores')">🧑‍💼 Mentor</button></div>
     <p class="hint">Mínimo 4 valores.</p>
-    <div class="fields-alert" id="alert3"></div>
+    <div class="fields-alert" id="alert4"></div>
     <div class="tag-input" id="valoresBox" onclick="document.getElementById('valorInput').focus()">
       <input type="text" id="valorInput" placeholder="Escribe un valor y Enter"/>
     </div>
   </div>
-  <div class="validation-panel" id="vp3"></div>
+  <div class="validation-panel" id="vp4"></div>
 </div>
 
-<!-- 4 OBJETIVOS -->
-<div class="section" id="sec4">
+<!-- 5 OBJETIVOS -->
+<div class="section" id="sec5">
   <div class="card">
     <div class="card-header"><h2>🏹 Objetivos</h2><button class="btn-mentor" onclick="openMentor('objetivos')">🧑‍💼 Mentor</button></div>
     <p class="hint">Un objetivo general y mínimo 3 específicos SMART.</p>
-    <div class="fields-alert" id="alert4"></div>
+    <div class="fields-alert" id="alert5"></div>
     <label>Objetivo General</label>
     <textarea id="obj_general" placeholder="Desarrollar un modelo de negocio que..." oninput="save()" rows="3"></textarea>
     <label style="margin-top:14px">Objetivos Específicos (mín. 3)</label>
     <div id="obj_especificos"></div>
     <button class="btn-add" onclick="addObjetivo()">+ Agregar objetivo específico</button>
   </div>
-  <div class="validation-panel" id="vp4"></div>
+  <div class="validation-panel" id="vp5"></div>
 </div>
 
-<!-- 5 BRAND IDENTITY -->
-<div class="section" id="sec5">
+<!-- 6 BRAND IDENTITY -->
+<div class="section" id="sec6">
   <div class="card">
     <div class="card-header"><h2>🎨 Identidad de Marca</h2><button class="btn-mentor" onclick="openMentor('brand')">🧑‍💼 Mentor</button></div>
     <p class="hint">Define los elementos visuales que identifican tu empresa.</p>
-    <div class="fields-alert" id="alert5"></div>
+    <div class="fields-alert" id="alert6"></div>
     <label>Descripción del logo (qué representa, elementos visuales)</label>
     <textarea id="brand_logo" placeholder="Nuestro logo muestra un árbol con hojas verdes que simboliza..." oninput="save()" rows="3"></textarea>
     <div style="margin-top:12px">
@@ -740,15 +759,15 @@ textarea{min-height:85px}
       <div style="display:flex;gap:8px;justify-content:center;margin-top:10px" id="bpColors"></div>
     </div>
   </div>
-  <div class="validation-panel" id="vp5"></div>
+  <div class="validation-panel" id="vp6"></div>
 </div>
 
-<!-- 6 IMÁGENES -->
-<div class="section" id="sec6">
+<!-- 7 IMÁGENES -->
+<div class="section" id="sec7">
   <div class="card">
     <h2>📸 Imágenes del Producto / Prototipo</h2>
     <p class="hint">Sube fotos de tu producto, prototipo, local o materiales. Mínimo 2 imágenes.</p>
-    <div class="fields-alert" id="alert6"></div>
+    <div class="fields-alert" id="alert7"></div>
     <div class="img-upload-zone" id="uploadZone">
       <input type="file" accept="image/*" multiple onchange="handleImages(event)" id="imgInput"/>
       <div style="pointer-events:none">
@@ -759,15 +778,15 @@ textarea{min-height:85px}
     </div>
     <div class="img-grid" id="imgGrid"></div>
   </div>
-  <div class="validation-panel" id="vp6"></div>
+  <div class="validation-panel" id="vp7"></div>
 </div>
 
-<!-- 7 CANVAS -->
-<div class="section" id="sec7">
+<!-- 8 CANVAS -->
+<div class="section" id="sec8">
   <div class="card">
     <div class="card-header"><h2>🗺️ Business Model Canvas</h2><button class="btn-mentor" onclick="openMentor('canvas')">🧑‍💼 Mentor</button></div>
     <p class="hint">9 bloques obligatorios.</p>
-    <div class="fields-alert" id="alert7"></div>
+    <div class="fields-alert" id="alert8"></div>
     <div class="canvas-grid">
       <div class="canvas-cell c-kp"><h4>🤝 Socios Clave</h4><textarea id="c_socios" oninput="save()"></textarea></div>
       <div class="canvas-cell c-ka"><h4>⚙️ Actividades Clave</h4><textarea id="c_actividades" oninput="save()"></textarea></div>
@@ -782,44 +801,44 @@ textarea{min-height:85px}
       <div class="canvas-cell"><h4>💰 Ingresos</h4><textarea id="c_ingresos" oninput="save()"></textarea></div>
     </div>
   </div>
-  <div class="validation-panel" id="vp7"></div>
+  <div class="validation-panel" id="vp8"></div>
 </div>
 
-<!-- 8 MERCADO -->
-<div class="section" id="sec8">
+<!-- 9 MERCADO -->
+<div class="section" id="sec9">
   <div class="card">
     <div class="card-header"><h2>🔍 Estudio de Mercado</h2><button class="btn-mentor" onclick="openMentor('mercado')">🧑‍💼 Mentor</button></div>
     <p class="hint">Todos los campos son obligatorios.</p>
-    <div class="fields-alert" id="alert8"></div>
+    <div class="fields-alert" id="alert9"></div>
     <label>Cliente ideal</label><textarea id="em_cliente" oninput="save()" rows="3"></textarea>
     <label>Tamaño del mercado</label><textarea id="em_tamano" oninput="save()" rows="3"></textarea>
     <label>Competencia</label><textarea id="em_competencia" oninput="save()" rows="3"></textarea>
     <label>Tendencias</label><textarea id="em_tendencias" oninput="save()" rows="3"></textarea>
     <label>Ventaja competitiva</label><textarea id="em_ventaja" oninput="save()" rows="3"></textarea>
   </div>
-  <div class="validation-panel" id="vp8"></div>
+  <div class="validation-panel" id="vp9"></div>
 </div>
 
-<!-- 9 MARKETING -->
-<div class="section" id="sec9">
+<!-- 10 MARKETING -->
+<div class="section" id="sec10">
   <div class="card">
     <div class="card-header"><h2>📣 Plan de Marketing</h2><button class="btn-mentor" onclick="openMentor('marketing')">🧑‍💼 Mentor</button></div>
     <p class="hint">Todos los campos obligatorios.</p>
-    <div class="fields-alert" id="alert9"></div>
+    <div class="fields-alert" id="alert10"></div>
     <label>Estrategia de precio</label><textarea id="mk_precio" oninput="save()" rows="3"></textarea>
     <label>Canales de distribución</label><textarea id="mk_canales" oninput="save()" rows="3"></textarea>
     <label>Estrategia de promoción</label><textarea id="mk_promo" oninput="save()" rows="3"></textarea>
     <label>Propuesta de valor diferenciadora</label><textarea id="mk_valor" oninput="save()" rows="3"></textarea>
   </div>
-  <div class="validation-panel" id="vp9"></div>
+  <div class="validation-panel" id="vp10"></div>
 </div>
 
-<!-- 10 COSTOS + GRÁFICA -->
-<div class="section" id="sec10">
+<!-- 11 COSTOS + GRÁFICA -->
+<div class="section" id="sec11">
   <div class="card">
     <div class="card-header"><h2>💰 Costos y Finanzas</h2><button class="btn-mentor" onclick="openMentor('costos')">🧑‍💼 Mentor</button></div>
     <p class="hint">Mínimo 2 costos fijos, 2 variables y precio de venta.</p>
-    <div class="fields-alert" id="alert10"></div>
+    <div class="fields-alert" id="alert11"></div>
     <label>Costos Fijos (mensuales)</label>
     <table class="cost-table" id="tablaFijos"><tr><th>Concepto</th><th>Valor ($)</th><th></th></tr></table>
     <button class="btn-add" onclick="addCosto('fijos')">+ Costo fijo</button>
@@ -854,15 +873,15 @@ textarea{min-height:85px}
       <span><span class="legend-dot" style="background:#43e97b"></span>Utilidad</span>
     </div>
   </div>
-  <div class="validation-panel" id="vp10"></div>
+  <div class="validation-panel" id="vp11"></div>
 </div>
 
-<!-- 11 ENCUESTA -->
-<div class="section" id="sec11">
+<!-- 12 ENCUESTA -->
+<div class="section" id="sec12">
   <div class="card">
     <h2>🗳️ Encuesta de Validación del Producto</h2>
     <p class="hint">Crea una encuesta para aplicar a clientes potenciales. Mínimo 4 preguntas.</p>
-    <div class="fields-alert" id="alert11"></div>
+    <div class="fields-alert" id="alert12"></div>
     <div id="surveyQuestions"></div>
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
       <button class="btn-add" onclick="addSurveyQ('opcion')">+ Pregunta de opción múltiple</button>
@@ -875,27 +894,27 @@ textarea{min-height:85px}
       <button class="btn-copy" onclick="copySurveyLink()">📋 Copiar texto de la encuesta</button>
     </div>
   </div>
-  <div class="validation-panel" id="vp11"></div>
-</div>
-
-<!-- 12 CRONOGRAMA -->
-<div class="section" id="sec12">
-  <div class="card">
-    <h2>📅 Cronograma</h2>
-    <p class="hint">Mínimo 4 actividades completas.</p>
-    <div class="fields-alert" id="alert12"></div>
-    <table class="crono-table" id="tablaCrono"><tr><th>Actividad</th><th>Responsable</th><th>Inicio</th><th>Fin</th><th>Estado</th><th></th></tr></table>
-    <button class="btn-add" onclick="addCrono()">+ Actividad</button>
-  </div>
   <div class="validation-panel" id="vp12"></div>
 </div>
 
-<!-- 13 PITCH -->
+<!-- 13 CRONOGRAMA -->
 <div class="section" id="sec13">
+  <div class="card">
+    <h2>📅 Cronograma</h2>
+    <p class="hint">Mínimo 4 actividades completas.</p>
+    <div class="fields-alert" id="alert13"></div>
+    <table class="crono-table" id="tablaCrono"><tr><th>Actividad</th><th>Responsable</th><th>Inicio</th><th>Fin</th><th>Estado</th><th></th></tr></table>
+    <button class="btn-add" onclick="addCrono()">+ Actividad</button>
+  </div>
+  <div class="validation-panel" id="vp13"></div>
+</div>
+
+<!-- 14 PITCH -->
+<div class="section" id="sec14">
   <div class="card">
     <div class="card-header"><h2>🎤 Elevator Pitch</h2><button class="btn-mentor" onclick="openMentor('pitch')">🧑‍💼 Mentor</button></div>
     <p class="hint">Las 5 partes son obligatorias.</p>
-    <div class="fields-alert" id="alert13"></div>
+    <div class="fields-alert" id="alert14"></div>
     <div class="pitch-block"><h4>1. El Gancho</h4><textarea id="pitch1" oninput="save();updatePitch()" rows="2"></textarea><div class="word-count" id="wc_p1">0 palabras</div></div>
     <div class="pitch-block"><h4>2. El Problema</h4><textarea id="pitch2" oninput="save();updatePitch()" rows="2"></textarea><div class="word-count" id="wc_p2">0 palabras</div></div>
     <div class="pitch-block"><h4>3. Nuestra Solución</h4><textarea id="pitch3" oninput="save();updatePitch()" rows="3"></textarea><div class="word-count" id="wc_p3">0 palabras</div></div>
@@ -905,11 +924,11 @@ textarea{min-height:85px}
       Total: <span id="pitchTotal" style="color:var(--green);font-weight:700">0</span> palabras <span style="color:var(--muted);font-size:.72rem">(ideal 100–130)</span>
     </div>
   </div>
-  <div class="validation-panel" id="vp13"></div>
+  <div class="validation-panel" id="vp14"></div>
 </div>
 
-<!-- 14 EXPORTAR -->
-<div class="section" id="sec14">
+<!-- 15 EXPORTAR -->
+<div class="section" id="sec15">
   <div class="card" style="text-align:center;padding:30px 20px">
     <div style="font-size:3rem;margin-bottom:14px">🎉</div>
     <h2 style="justify-content:center;font-size:1.2rem;margin-bottom:8px">¡Plan de Negocio Completo!</h2>
@@ -1263,9 +1282,9 @@ function subscribeToRealtime(callback){
 }
 
 // ── APP CONSTANTS ──────────────────────────────
-const TOTAL_PHASES=14;
-const SECS=['Portada','Abstract','Misión & Visión','Valores','Objetivos','🎨 Marca','📸 Imágenes','Canvas','Mercado','Marketing','💰 Costos','🗳️ Encuesta','Cronograma','Pitch','Exportar'];
-const ICONS=['🏷️','📄','🎯','💎','🏹','🎨','📸','🗺️','🔍','📣','💰','🗳️','📅','🎤','📥'];
+const TOTAL_PHASES=15;
+const SECS=['Portada','Problema','Abstract','Misión & Visión','Valores','Objetivos','🎨 Marca','📸 Imágenes','Canvas','Mercado','Marketing','💰 Costos','🗳️ Encuesta','Cronograma','Pitch','Exportar'];
+const ICONS=['🏷️','🔍','📄','🎯','💎','🏹','🎨','📸','🗺️','🔎','📣','💰','🗳️','📅','🎤','📥'];
 const XP_PER=100;
 const LOGROS_DEF=[
   {id:'first',icon:'🌱',name:'Primer Paso',condition:n=>n>=1},
@@ -1377,6 +1396,7 @@ function updateNavUI(){
 function wc(t){return t.trim().split(/\s+/).filter(Boolean).length;}
 const FIELD_RULES=[
   ()=>{const m=[];if(!v('p_empresa').trim())m.push('Nombre empresa');if(!v('p_slogan').trim())m.push('Slogan');if(!v('p_sector').trim())m.push('Sector');if(!v('p_fecha').trim())m.push('Fecha');if(integrantes.length<2)m.push('Mín. 2 integrantes');return m;},
+  ()=>{const m=[];if(wc(v('prob_descripcion'))<20)m.push(`Descripción del problema: ${wc(v('prob_descripcion'))}/20 palabras`);if(!v('prob_afectados').trim())m.push('¿A quién afecta?');return m;},
   ()=>{if(wc(v('abstract'))<50)return[`Abstract: ${wc(v('abstract'))}/50 palabras`];return[];},
   ()=>{const m=[];if(wc(v('mision'))<30)m.push(`Misión: ${wc(v('mision'))}/30 palabras`);if(wc(v('vision'))<20)m.push(`Visión: ${wc(v('vision'))}/20 palabras`);return m;},
   ()=>{if(valores.length<4)return[`Valores: ${valores.length}/4 mínimo`];return[];},
@@ -1401,6 +1421,17 @@ async function validateAndAdvance(){
   document.querySelectorAll('.field-error').forEach(e=>e.classList.remove('field-error'));
   if(miss.length){showAlert(current,miss);sectionState[current]='incomplete';approvalStreak=0;updateNavUI();document.getElementById('alert'+current).scrollIntoView({behavior:'smooth',block:'center'});return;}
   showAlert(current,[]);
+
+  // Si no hay Worker configurado, avanzar sin validación IA
+  if(!getWorkerUrl()){
+    sectionState[current]='approved';
+    approvalStreak++;awardXP(XP_PER);checkLogros();save();
+    updateNavUI();updateProgress();
+    showToast('✅ Fase guardada. Conecta el Mentor IA para evaluación completa.');
+    setTimeout(()=>goTo(current+1),1000);
+    return;
+  }
+
   sectionState[current]='validating';updateNavUI();
   const vp=document.getElementById('vp'+current);
   vp.className='validation-panel show';
@@ -1411,14 +1442,12 @@ async function validateAndAdvance(){
     const data=await res.json();
     const text=data.content?.map(b=>b.text||'').join('')||'';
     console.log('Respuesta IA completa:', text);
-    // Buscar calificación en varios formatos
     const scoreMatch = text.match(/(\d+)\s*\/\s*10/) || 
                        text.match(/[Cc]alificaci[oó]n[:\s]+(\d+)/) || 
                        text.match(/⭐\s*(\d+)/) ||
                        text.match(/nota[:\s]+(\d+)/i) ||
                        text.match(/puntaje[:\s]+(\d+)/i);
     const score = parseInt(scoreMatch?.[1] || '0');
-    // Si no hay score pero el texto es positivo, aprobar
     const positiveWords = ['excelente','aprobado','aprobada','muy bien','bien hecho','felicit','perfecto','correcto','completo','logrado','efectiv','coherent','comunica','claridad','solid','destaca','impresion','notable'];
     const negativeWords = ['mejorar','incompleto','falta','insuficiente','débil','vago','confuso','poco claro'];
     const hasPositive = positiveWords.some(w => text.toLowerCase().includes(w));
@@ -1428,7 +1457,23 @@ async function validateAndAdvance(){
     if(ok){approvalStreak++;awardXP(XP_PER);checkLogros();save();}else approvalStreak=0;
     renderVP(current,text,ok);updateNavUI();updateProgress();
     if(ok)setTimeout(()=>goTo(current+1),2800);
-  }catch(e){vp.innerHTML=`<div class="vp-content"><p style="color:var(--warn)">⚠️ Error de conexión.</p></div>`;sectionState[current]='pending';updateNavUI();}
+  }catch(e){
+    // Error de conexión — permitir avanzar igual
+    vp.innerHTML=`<div class="vp-content">
+      <p style="color:var(--warn)">⚠️ Sin conexión con el Mentor IA.</p>
+      <button onclick="skipValidation()" style="margin-top:8px;padding:8px 16px;border-radius:8px;border:none;background:var(--accent);color:#fff;cursor:pointer;font-weight:700">Continuar sin evaluación →</button>
+    </div>`;
+    sectionState[current]='pending';updateNavUI();
+  }
+}
+
+function skipValidation(){
+  sectionState[current]='approved';
+  approvalStreak++;awardXP(XP_PER);checkLogros();save();
+  updateNavUI();updateProgress();
+  const vp=document.getElementById('vp'+current);
+  if(vp) vp.className='validation-panel';
+  setTimeout(()=>goTo(current+1),500);
 }
 
 function renderVP(i,text,ok){
@@ -1445,6 +1490,7 @@ function buildVPrompt(i){
   const inst=`\n\nResponde SIEMPRE en este formato exacto:\n## ✅ Fortalezas\n## 🔧 Mejoras\n## 💼 Consejo\n## ⭐ Calificación: X/10\n> Frase motivadora\n\nIMPORTANTE: La calificación DEBE escribirse como número/10 (ej: 7/10). 6/10 o más aprueba. Máx 180 palabras. Responde en español.`;
   const ps=[
     ()=>`${base}Evalúa PORTADA: Empresa="${emp}", Slogan="${v('p_slogan')}", Sector="${v('p_sector')}", Integrantes="${integrantes.join(', ')}"${inst}`,
+    ()=>`${base}Evalúa PLANTEAMIENTO DEL PROBLEMA:\nDescripción: "${v('prob_descripcion')}"\nAfectados: "${v('prob_afectados')}"\nEvidencia: "${v('prob_evidencia')}"\nSoluciones actuales: "${v('prob_soluciones_actuales')}"${inst}`,
     ()=>`${base}Evalúa ABSTRACT (${wc(v('abstract'))} palabras): "${v('abstract')}"${inst}`,
     ()=>`${base}Evalúa MISIÓN: "${v('mision')}" / VISIÓN: "${v('vision')}"${inst}`,
     ()=>`${base}Evalúa VALORES: ${valores.join(', ')}${inst}`,
@@ -1641,10 +1687,18 @@ function v(id){return document.getElementById(id)?.value||'';}
 function save(){
   try{
     const imgs=uploadedImages.slice(0,6).map(i=>({src:i.src.length>500000?i.src.substring(0,500000):i.src,name:i.name}));
-    const data={p_empresa:v('p_empresa'),p_slogan:v('p_slogan'),p_sector:v('p_sector'),p_fecha:v('p_fecha'),p_docente:v('p_docente'),integrantes,valores,abstract:v('abstract'),mision:v('mision'),vision:v('vision'),obj_general:v('obj_general'),objetivosEsp,brand_logo:v('brand_logo'),brand_personalidad:v('brand_personalidad'),brand_color1:v('brand_color1'),brand_color2:v('brand_color2'),brand_color3:v('brand_color3'),brand_color4:v('brand_color4'),brandFont,c_socios:v('c_socios'),c_actividades:v('c_actividades'),c_propuesta:v('c_propuesta'),c_relacion:v('c_relacion'),c_segmento:v('c_segmento'),c_recursos:v('c_recursos'),c_canales:v('c_canales'),c_costos:v('c_costos'),c_ingresos:v('c_ingresos'),em_cliente:v('em_cliente'),em_tamano:v('em_tamano'),em_competencia:v('em_competencia'),em_tendencias:v('em_tendencias'),em_ventaja:v('em_ventaja'),mk_precio:v('mk_precio'),mk_canales:v('mk_canales'),mk_promo:v('mk_promo'),mk_valor:v('mk_valor'),costosFijos,costosVariables,precio_venta:v('precio_venta'),proj_u1:v('proj_u1'),proj_growth:v('proj_growth'),surveyQuestions,cronos,pitch1:v('pitch1'),pitch2:v('pitch2'),pitch3:v('pitch3'),pitch4:v('pitch4'),pitch5:v('pitch5'),sectionState,xp,earnedLogros:[...earnedLogros],approvalStreak,chatHistory,uploadedImages:imgs};
+    const data={prob_descripcion:v('prob_descripcion'),prob_afectados:v('prob_afectados'),prob_evidencia:v('prob_evidencia'),prob_soluciones_actuales:v('prob_soluciones_actuales'),p_empresa:v('p_empresa'),p_slogan:v('p_slogan'),p_sector:v('p_sector'),p_fecha:v('p_fecha'),p_docente:v('p_docente'),integrantes,valores,abstract:v('abstract'),mision:v('mision'),vision:v('vision'),obj_general:v('obj_general'),objetivosEsp,brand_logo:v('brand_logo'),brand_personalidad:v('brand_personalidad'),brand_color1:v('brand_color1'),brand_color2:v('brand_color2'),brand_color3:v('brand_color3'),brand_color4:v('brand_color4'),brandFont,c_socios:v('c_socios'),c_actividades:v('c_actividades'),c_propuesta:v('c_propuesta'),c_relacion:v('c_relacion'),c_segmento:v('c_segmento'),c_recursos:v('c_recursos'),c_canales:v('c_canales'),c_costos:v('c_costos'),c_ingresos:v('c_ingresos'),em_cliente:v('em_cliente'),em_tamano:v('em_tamano'),em_competencia:v('em_competencia'),em_tendencias:v('em_tendencias'),em_ventaja:v('em_ventaja'),mk_precio:v('mk_precio'),mk_canales:v('mk_canales'),mk_promo:v('mk_promo'),mk_valor:v('mk_valor'),costosFijos,costosVariables,precio_venta:v('precio_venta'),proj_u1:v('proj_u1'),proj_growth:v('proj_growth'),surveyQuestions,cronos,pitch1:v('pitch1'),pitch2:v('pitch2'),pitch3:v('pitch3'),pitch4:v('pitch4'),pitch5:v('pitch5'),sectionState,xp,earnedLogros:[...earnedLogros],approvalStreak,chatHistory,uploadedImages:imgs};
     localStorage.setItem('pe6',JSON.stringify(data));
     // Sync a Firestore en tiempo real
-    if(grupoActivo) saveToFirestore(grupoActivo, {...data, nombre:currentSession?.nombre||'', grado:currentSession?.grado||'', updatedAt: new Date().toISOString()});
+    if(grupoActivo){
+      const grupoInfo = grupos.find(g=>g.id===grupoActivo);
+      saveToFirestore(grupoActivo, {
+        ...data,
+        equipoNombre: grupoInfo?.nombre || currentSession?.nombre || '',
+        equipoGrado: grupoInfo?.grado || currentSession?.grado || '',
+        updatedAt: new Date().toISOString()
+      });
+    }
   }catch(e){console.warn('Storage full');try{localStorage.setItem('pe6_noimg','1');}catch(e2){}}
   // Sync lightweight snapshot to active grupo
   if(typeof grupos!=='undefined'&&grupos.length){
@@ -1660,6 +1714,8 @@ function load(){
   const s=(id,val)=>{const el=document.getElementById(id);if(el&&val!==undefined)el.value=val;};
   ['p_empresa','p_slogan','p_sector','p_fecha'].forEach(id=>s(id,d[id]));
   s('p_docente',d.p_docente||'Julio Moreno Taylor');
+  // Problema fields
+  ['prob_descripcion','prob_afectados','prob_evidencia','prob_soluciones_actuales'].forEach(id=>s(id,d[id]));
   integrantes=d.integrantes||[];renderTags('integrantes');
   valores=d.valores||[];renderTags('valores');
   ['abstract','mision','vision','obj_general'].forEach(id=>s(id,d[id]));
@@ -1684,7 +1740,7 @@ function load(){
 }
 
 // ── MENTOR MODAL ─────────────────────────────
-const MENTOR_LABELS={abstract:'Abstract',mision:'Misión',vision:'Visión',valores:'Valores',objetivos:'Objetivos',brand:'Identidad de Marca',canvas:'Canvas',mercado:'Estudio de Mercado',marketing:'Marketing',costos:'Costos',pitch:'Elevator Pitch'};
+const MENTOR_LABELS={problema:'Planteamiento del Problema',abstract:'Abstract',mision:'Misión',vision:'Visión',valores:'Valores',objetivos:'Objetivos',brand:'Identidad de Marca',canvas:'Canvas',mercado:'Estudio de Mercado',marketing:'Marketing',costos:'Costos',pitch:'Elevator Pitch'};
 function openMentor(section){
   currentMentorSection=section;
   document.getElementById('modalTitle').textContent=MENTOR_LABELS[section]||section;
@@ -3223,6 +3279,15 @@ function doRegistro(){
   saveAuthUsers(users);
   grupos.push({id,nombre,grado,data:{}});
   saveGrupos();
+  // Guardar grupo en Firestore con nombre correcto
+  if(firestoreReady){
+    db.collection('grupos').doc(id).set({
+      equipoNombre: nombre,
+      equipoGrado: grado,
+      sectionState: Array(15).fill('pending'),
+      xp: 0
+    }).catch(e=>console.warn('Error creando grupo:', e.message));
+  }
   enterApp({grupoId:id,rol:loginRolSeleccionado,nombre});
 }
 
@@ -3305,7 +3370,10 @@ async function enterApp(session){
         grupos.length=0;
         snap.forEach(doc=>{
           const d=doc.data();
-          grupos.push({id:doc.id, nombre:d.nombre||doc.id, grado:d.grado||'Grado 11', data:d});
+          // equipoNombre tiene prioridad sobre nombre (que puede ser del docente)
+          const nombreEquipo = d.equipoNombre || d.nombre || doc.id;
+          const gradoEquipo = d.equipoGrado || d.grado || 'Grado 11';
+          grupos.push({id:doc.id, nombre:nombreEquipo, grado:gradoEquipo, data:d});
         });
         saveGrupos();
       }
@@ -3319,9 +3387,11 @@ async function enterApp(session){
     if(session.rol==='docente'){
       subscribeToRealtime((gruposData)=>{
         gruposData.forEach(g=>{
+          const nombreEquipo = g.equipoNombre || g.nombre || g.id;
+          const gradoEquipo = g.equipoGrado || g.grado || '';
           const existing = grupos.find(gr=>gr.id===g.id);
-          if(existing) existing.data = g;
-          else grupos.push({id:g.id, nombre:g.nombre||g.id, grado:g.grado||'', data:g});
+          if(existing){ existing.data = g; existing.nombre=nombreEquipo; existing.grado=gradoEquipo; }
+          else grupos.push({id:g.id, nombre:nombreEquipo, grado:gradoEquipo, data:g});
         });
         saveGrupos();
         renderGrupoBar();
